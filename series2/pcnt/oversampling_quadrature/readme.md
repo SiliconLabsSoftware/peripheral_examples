@@ -33,14 +33,14 @@ NOTE: Due to WSTK schematic, both buttons released starts PCNT State Transition
 8. Repeat steps 3-5 for a total of 6 presses/releases (presses + releases = 6)
 9. Observe LED1 toggles on to indicate an overflow; with hysteresis, count is 
    reloaded with TOP/2 = 5 for this example
-10.Now do the reverse button sequence: press BTN1, hold; then BTN0, hold;
+10. Now do the reverse button sequence: press BTN1, hold; then BTN0, hold;
    release BTN1 then BTN0, press BTN1 then BTN0, when you release BTN0
    LED0 will turn on since Status register's direction bit changed to 0 (up 
    counter)
-11.If you reverse the pattern again, LED0 will turn off (toggle); note you
+11. If you reverse the pattern again, LED0 will turn off (toggle); note you
    need to repeat the pattern twice before noticing the change because the push
    button behavior is reverse logic (pressed is logic low)
-12.You may set a break point in the interrupt service routine and step through 
+12. You may set a break point in the interrupt service routine and step through 
    execution to get the current absolute count based on OF/UF events and the TOP
    value/hysteresis.
 
@@ -50,36 +50,45 @@ NOTE: Due to WSTK schematic, both buttons released starts PCNT State Transition
 * External Clock - Push Button 0
 * PCNT
 
-* Board:  Silicon Labs EFR32xG23 Radio Board (BRD4204D) + Wireless Starter Kit Mainboard
+## Hardware & Connections ##
+
+* Board:  Silicon Labs EFR32xG23 Radio Board (BRD4204D) + Wireless Starter/Pro Kit Mainboard (BRD4001A/BRD4002A)
     * Device: EFR32ZG23B010F512IM48
         * PB01 -  Push Button PB0
         * PB02 -  LED0
         * PB03 -  Push Button PB1
         * PD03 -  LED1
 
-* Board:  Silicon Labs EFR32xG24 Radio Board (BRD4186C) + Wireless Starter Kit Mainboard
+* Board:  Silicon Labs EFR32xG24 Radio Board (BRD4186C) + Wireless Starter/Pro Kit Mainboard (BRD4001A/BRD4002A)
     * Device: EFR32MG24B210F1536IM48
         * PB01 -  Push Button PB0
         * PB02 -  LED0
         * PB03 -  Push Button PB1
         * PB04 -  LED1
 
-* Board:  Silicon Labs EFR32xG25 Radio Board (BRD4270B) + Wireless Starter Kit Mainboard
+* Board:  Silicon Labs EFR32xG25 Radio Board (BRD4270B) + Wireless Starter/Pro Kit Mainboard (BRD4001A/BRD4002A)
     * Device: EFR32FG25B222F1920IM56
         * PB00 -  Push Button PB0
         * PC06 -  LED0
         * PB01 -  Push Button PB1
         * PC07 -  LED1
 
-* Board:  Silicon Labs EFR32xG26 Radio Board (BRD4117A) + Wireless Starter Kit Mainboard
+* Board:  Silicon Labs EFR32xG26 Radio Board (BRD4117A) + Wireless Starter/Pro Kit Mainboard (BRD4001A/BRD4002A)
     * Device: EFR32MG26B420F3200IM48
         * PB01 -  Push Button PB0
         * PB02 -  LED0
         * PB03 -  Push Button PB1
         * PB04 -  LED1
 
-* Board:  Silicon Labs EFR32xG28 Radio Board (BRD4400C) + Wireless Starter Kit Mainboard
+* Board:  Silicon Labs EFR32xG28 Radio Board (BRD4400C) + Wireless Starter/Pro Kit Mainboard (BRD4001A/BRD4002A)
     * Device: EFR32ZG28B312F1024IM68
+        * PB01 -  Push Button PB0
+        * PB02 -  LED0
+        * PB03 -  Push Button PB1
+        * PD03 -  LED1
+
+* Board:  Silicon Labs EFR32FG2D 868-915 MHz 14 dBm Radio Board (BRD4277A) + Wireless Starter/Pro Kit Mainboard (BRD4001A/BRD4002A)
+    * Device: EFR32FG2DB010F512IM48
         * PB01 -  Push Button PB0
         * PB02 -  LED0
         * PB03 -  Push Button PB1
