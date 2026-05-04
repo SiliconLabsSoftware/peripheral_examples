@@ -1825,8 +1825,8 @@
     <properties key="solutionReferenceId" value="extension.peripheral_examples_simplicity_sdk.series2.vdac.sine_wave_synch_prs.SimplicityStudio.vdac_sine_wave_synch_prs.slcp"/>
     <properties key="projectFilePaths" value="series2/vdac/sine_wave_synch_prs/SimplicityStudio/vdac_sine_wave_synch_prs.slcp"/>
     <properties key="readmeFiles" value="series2/vdac/sine_wave_synch_prs/readme.md"/>
-    <properties key="boardCompatibility" value="brd4400c com.silabs.board.none"/>
-    <properties key="partCompatibility" value=".*efr32zg28.*"/>
+    <properties key="boardCompatibility" value="brd4400c brd4277a com.silabs.board.none"/>
+    <properties key="partCompatibility" value=".*efr32zg28.* .*efr32fg2d.*"/>
     <properties key="ideCompatibility" value="generic-template iar-embedded-workbench makefile-ide simplicity-ide visual-studio-code"/>
     <properties key="toolchainCompatibility" value="gcc iar llvm"/>
     <properties key="category" value="Example|Peripheral Examples"/>

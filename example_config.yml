@@ -795,7 +795,10 @@ example:
     - brd4420a # Removing xG29 Radio Board due to lack of VDAC peripheral
 
 - path: series2/vdac/sine_wave_synch_prs/SimplicityStudio/vdac_sine_wave_synch_prs.slcp
-  board_whitelist: brd4400c # Only xG28 supports PRS‑controlled sine generation
+  board_whitelist: 
+    - brd4400c # xG28 supports PRS‑controlled sine generation
+    - brd4277a # xG2D supports PRS controlled sine generation
+
   board_blacklist:
 
 - path: series2/vdac/timer_dma_waveform/SimplicityStudio/vdac_timer_dma_waveform.slcp
