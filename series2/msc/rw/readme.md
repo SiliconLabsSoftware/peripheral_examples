@@ -2,13 +2,13 @@
 
 ## Summary ##
 
-This project demonstrates how to use the user data page of flash memory. The 
-value `32` is written to the 4th word in the page, and then the same memory 
-location is read back into a variable. This allows users to observe and verify 
+This project demonstrates how to use the user data page of flash memory. The
+value `32` is written to the 4th word in the page, and then the same memory
+location is read back into a variable. This allows users to observe and verify
 read/write flash behavior using a debugger.
 
-> Note: On EFR32xG21 devices, oscillators and clock branches are automatically 
-enabled/disabled based on peripheral demand. Therefore, manually enabling 
+> Note: On EFR32xG21 devices, oscillators and clock branches are automatically
+enabled/disabled based on peripheral demand. Therefore, manually enabling
 clocks has no effect on xG21 devices.
 
 ## Peripherals used ##
@@ -21,9 +21,9 @@ clocks has no effect on xG21 devices.
 
 1. Build the project and download it to the Wireless Starter Kit.
 2. Run the program in debug mode.
-3. Inspect the value of `Cleared_value` in the debugger.  
+3. Inspect the value of `Cleared_value` in the debugger.
    It should read: 4294967295 (0xFFFFFFFF).
-4. Inspect the value of `Set_value` in the debugger.  
+4. Inspect the value of `Set_value` in the debugger.
    It should read: 32.
 
 ## Hardware & Connections ##
@@ -54,3 +54,6 @@ clocks has no effect on xG21 devices.
 
 * Board: Silicon Labs EFR32xG29 Buck Radio Board (BRD4412A) + Wireless Starter Kit Mainboard
     * Device: EFR32MG29B140F1024IM40
+
+* Board:  Silicon Labs EFR32FG2D 868-915 MHz 14 dBm Radio Board (BRD4277A) + Wireless Starter Kit Mainboard
+    * Device: EFR32FG2DB010F512IM48

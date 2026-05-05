@@ -2,25 +2,25 @@
 
 ## Summary ##
 
-This project demonstrates how to lock flash memory pages using the 
-`MSC_PAGELOCKn` and `MSC_MISCLOCKWORD` registers. While setting lock bits is 
-straightforward, deciding where in your application to place these writes 
+This project demonstrates how to lock flash memory pages using the
+`MSC_PAGELOCKn` and `MSC_MISCLOCKWORD` registers. While setting lock bits is
+straightforward, deciding where in your application to place these writes
 requires care.
 
 This example demonstrates early-stage flash page locking via `app_init_early()`,
-followed by verification attempts in `app_init()`. A GPIO pin connected to LED0 
-is toggled to mark timing, and locked pages are confirmed by checking for expected 
+followed by verification attempts in `app_init()`. A GPIO pin connected to LED0
+is toggled to mark timing, and locked pages are confirmed by checking for expected
 erase failures.
 
-> Note: On EFR32xG21 devices, oscillators and clock branches are automatically 
-turned on/off based on demand from the peripherals.  As such, writes to clock 
-enable bits are unnecessary and have no effect on xG21 devices. 
+> Note: On EFR32xG21 devices, oscillators and clock branches are automatically
+turned on/off based on demand from the peripherals.  As such, writes to clock
+enable bits are unnecessary and have no effect on xG21 devices.
 
-> Future Work: The flash page locking currently occurs in `app_init_early()` to 
-ensure it executes before most application logic. However, once the generalized 
+> Future Work: The flash page locking currently occurs in `app_init_early()` to
+ensure it executes before most application logic. However, once the generalized
 `SystemInit2()` hook becomes available, the plan is to move this logic there.
-`SystemInit2()` runs even earlier than `app_init_early()` in the boot 
-sequence. 
+`SystemInit2()` runs even earlier than `app_init_early()` in the boot
+sequence.
 
 ## Peripherals used ##
 
@@ -33,13 +33,13 @@ sequence.
 2. Build the project and download it to the Starter Kit.
 3. Run the program.
 4. Press the pause button. The program should halt in a `app_process_action()` loop.
-5. To observe how much elapses between issuing critical register writes in 
-   `app_init_early()` vs. `app_init()` set an oscilloscope to trigger once on 
+5. To observe how much elapses between issuing critical register writes in
+   `app_init_early()` vs. `app_init()` set an oscilloscope to trigger once on
    a rising edge with a time scale of 25 or 50 us/division.
 6. Observe the LED0 GPIO pin by probing the anode of LED0 on the WSTK
    mainboard (this is the solder pad just below the letter 'E' of the 'LED0'
    component label), or the breakout/expansion header pin indicated below.
-7. Run the demo again and observe the pulse on the oscilloscope. 
+7. Run the demo again and observe the pulse on the oscilloscope.
 
 ## Hardware & Connections ##
 
@@ -78,3 +78,7 @@ sequence.
 * Board: Silicon Labs EFR32xG29 Buck Radio Board (BRD4412A) + Wireless Starter Kit Mainboard
     * Device: EFR32MG29B140F1024IM40
         * PB00 - LED1 (WSTK Breakout Header P4, Expansion Header Pin 7)
+
+* Board:  Silicon Labs EFR32FG2D 868-915 MHz 14 dBm Radio Board (BRD4277A) + Wireless Starter Kit Mainboard
+    * Device: EFR32FG2DB010F512IM48
+        * PB02 - LED0 (WSTK Breakout Header P19)
