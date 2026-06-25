@@ -33,6 +33,18 @@
 // EXP HEADER
 // =========================================================
 
+// <gpio> EUS0CS
+// $[GPIO_EUS0CS]
+#define EUS0CS_PORT                 SL_GPIO_PORT_A
+#define EUS0CS_PIN                  7
+// [GPIO_EUS0CS]$
+
+// <gpio> EUS0SCLK
+// $[GPIO_EUS0SCLK]
+#define EUS0SCLK_PORT               SL_GPIO_PORT_A
+#define EUS0SCLK_PIN                10
+// [GPIO_EUS0SCLK]$
+
 // <gpio> EXP_UART_TX
 // $[GPIO_EXP_UART_TX]
 #define EXP_UART_TX_PORT            SL_GPIO_PORT_A
@@ -148,13 +160,6 @@
 
 #define EUS0MISO_PORT               EXP_UART_RX_PORT
 #define EUS0MISO_PIN                EXP_UART_RX_PIN
-
-#define EUS0SCLK_PORT               EXP_SPI_SCK_PORT
-#define EUS0SCLK_PIN                EXP_SPI_SCK_PIN
-
-#define EUS0CS_PORT                 EXP_SPI_CS_PORT
-#define EUS0CS_PIN                  EXP_SPI_CS_PIN
-
 
 // =========================================================
 // I2C FOLLOWER

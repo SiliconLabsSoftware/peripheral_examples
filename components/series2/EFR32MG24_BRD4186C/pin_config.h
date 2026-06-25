@@ -51,6 +51,12 @@
 #define LETIMER_OUTPUT_0_PIN        0
 // [GPIO_LETIMER_OUTPUT_0]$
 
+// <gpio> EUS0CS
+// $[GPIO_EUS0CS]
+#define EUS0CS_PORT                 SL_GPIO_PORT_A
+#define EUS0CS_PIN                  7
+// [GPIO_EUS0CS]$
+
 // <gpio> EXP_UART_TX
 // $[GPIO_EXP_UART_TX]
 #define EXP_UART_TX_PORT            SL_GPIO_PORT_A
@@ -150,10 +156,6 @@
 
 #define EUS0SCLK_PORT               TIMER_EXTIO_PORT
 #define EUS0SCLK_PIN                TIMER_EXTIO_PIN
-
-#define EUS0CS_PORT                 EXP_LET0_O0_PORT
-#define EUS0CS_PIN                  EXP_LET0_O0_PIN
-
 
 // =========================================================
 // TIMER SIGNALS
